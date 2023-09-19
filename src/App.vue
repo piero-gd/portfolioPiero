@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import { onMounted } from 'vue';
 
 export default {
   name: 'App',
@@ -14,5 +15,11 @@ export default {
   data: () => ({
     //
   }),
+
+  setup() {
+    onMounted(() => {
+      document.title = 'Portafolio Piero';
+    });
+  },
 };
 </script>
