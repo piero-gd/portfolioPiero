@@ -10,7 +10,7 @@
           <h5 class="white--text top">Hola 👋🏻, soy</h5>
           <h1 class="green--text text--darken-2">Piero Gallo</h1>
           <p class="grey--text">
-            Desarrollador Frontend, apasionado de la Experiencia de Usuario
+            Desarrollador Frontend, apasionado por la Experiencia de Usuario
           </p>
           <v-btn title color="#26532B" href="https://drive.google.com/file/d/1Y1zch8yLV9NcktnsesVFb6mQ5ox-uXRN/view"
             target="_blank" dark>descarga mi cv</v-btn>
