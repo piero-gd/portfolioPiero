@@ -9,12 +9,15 @@
                   Me encanta crear aplicaciones que brinden una experiencia satisfactoria para las personas. Puedes ver 
                   mis proyectos en la sección de 
                   <a text @click="scroll('projects')"><strong ><em class="white--text">proyectos</em></strong> </a>
-                  . <br/><br/>
+                  . 
+                  <br/><br/>
 
                   Soy una persona comprometida, responsable y proactiva en mis labores asignadas. Dispongo de 
                   conocimientos en desarrollo web, móvil, diseño UX/UI y de muchas ganas de aprender más, 
                   desarrollando habilidades y destrezas aplicables en mi vida profesional y personal. Mas abajo puedes
                   ver las tecnologías que utilizo.
+                  <br/><br/>
+                  Este portafolio fue realizado utilizando VueJS!
 
                 </p>
               </div>
