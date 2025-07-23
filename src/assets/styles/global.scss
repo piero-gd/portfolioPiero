@@ -1,0 +1,60 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+// Global styles
+html, body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: $color-primary;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: $color-primary-light;
+  }
+}
+
+.section-title {
+  color: $color-text-primary;
+  margin-bottom: $spacing-lg;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: $spacing-sm;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: $color-primary;
+  }
+}
+
+.bg-primary {
+  background-color: $color-primary !important;
+}
+
+.bg-dark {
+  background-color: $color-background-secondary !important;
+}
+
+.bg-darker {
+  background-color: $color-background !important;
+}
+
+.text-primary {
+  color: $color-primary !important;
+}
+
+.text-white {
+  color: $color-text-primary !important;
+}
+
+.text-muted {
+  color: $color-text-secondary !important;
+}
