@@ -12,7 +12,7 @@
           <p class="grey--text">
             Desarrollador Frontend, apasionado por la Experiencia de Usuario
           </p>
-          <v-btn title color="#26532B" href="https://drive.google.com/file/d/1Y1zch8yLV9NcktnsesVFb6mQ5ox-uXRN/view"
+          <v-btn title color="#26532B" href="https://drive.google.com/file/d/1acAK3hmiXlW5GS0Mk0GtQMkD_jlNeczN/view?usp=sharing"
             target="_blank" dark>descarga mi cv</v-btn>
         </v-col>
 
@@ -34,7 +34,7 @@
         </v-col>
         <v-col md="3" offset-md="3">
           <v-card class="pa-2 py-5" outlined tile  color="#1e1e1e">
-            <v-img src="img/cc-home.png" contain></v-img>
+            <v-img src="img/ss-cerocinco-home.png" contain></v-img>
           </v-card>
         </v-col>
         <v-col md="3">
@@ -46,7 +46,7 @@
           <v-btn color="white" dark text class="ml-n4">
             Cerocinco
           </v-btn><br />
-          <p class="grey--text">Aplicación web de una tienda de ropa virtual.</p>
+          <p class="grey--text">Aplicación web de una tienda de ropa virtual. Se utilizó React y Bootstrap. </p>
           <v-btn class="mx-1 white--text" href="https://github.com/Pierex99/cerocinco-Gallo" target="_blank" icon>
             <v-icon size="24px">mdi-github </v-icon>
           </v-btn>
@@ -59,7 +59,7 @@
             FrutiExpress
           </v-btn><br />
           <p class="grey--text">Aplicación web de un minimarket virtual que vende productos cotidianos. Incluye sección de
-            login.</p>
+            login. Se utilizó JavaScript Vanilla y EJS.</p>
           <v-btn class="mx-1 white--text" href="https://github.com/Pierex99/Web-FrutiExpress" target="_blank" icon>
             <v-icon size="24px">mdi-github</v-icon>
           </v-btn>
