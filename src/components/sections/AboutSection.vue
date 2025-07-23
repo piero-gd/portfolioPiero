@@ -2,18 +2,20 @@
   <v-col cols="12" id="about">
     <div class="infobox bgColor1">
       <v-icon color="#26532B" x-large class="ml-3">mdi-palette-swatch</v-icon>
-      <h3 class="white--text ml-3 mt-4">Sobre Mí</h3>
+      <h3 class="white--text ml-3 mt-4">{{ $t('about.title') }}</h3>
       <p class="grey--text ml-3 mt-6">
-        Me encanta crear aplicaciones que brinden una experiencia satisfactoria para las personas. Puedes ver mis
-        proyectos en la sección de
-        <a text @click="scrollToElement('projects')"><strong><em class="white--text">proyectos</em></strong> </a>.
+        {{ $t('about.content') }}
+        <a text @click="scrollToElement('projects')">
+          <strong><em class="white--text">{{ $i18n.locale === 'es' ? 'proyectos' : 'projects' }}</em></strong>
+        </a>.
         <br /><br />
-
-        Soy una persona comprometida, responsable y proactiva en mis labores asignadas. Dispongo de conocimientos en
-        desarrollo web, móvil, diseño UX/UI y de muchas ganas de aprender más, desarrollando habilidades y destrezas
-        aplicables en mi vida profesional y personal. Mas abajo puedes ver las tecnologías que utilizo.
+        {{ $i18n.locale === 'es' ? 
+          'Soy una persona comprometida, responsable y proactiva en mis labores asignadas. Dispongo de conocimientos en desarrollo web, móvil, diseño UX/UI y de muchas ganas de aprender más, desarrollando habilidades y destrezas aplicables en mi vida profesional y personal. Mas abajo puedes ver las tecnologías que utilizo.' 
+          : 
+          'I am a committed, responsible, and proactive person in my assigned tasks. I have knowledge in web development, mobile development, UX/UI design, and a great desire to learn more, developing skills applicable in my professional and personal life. Below you can see the technologies I use.'
+        }}
         <br /><br />
-        Este portafolio fue realizado utilizando VueJS!
+        {{ $i18n.locale === 'es' ? 'Este portafolio fue realizado utilizando VueJS!' : 'This portfolio was made using VueJS!' }}
       </p>
     </div>
   </v-col>

@@ -32,7 +32,7 @@ import SkillsSection from '@/components/sections/SkillsSection.vue';
 import ProjectsSection from '@/components/sections/ProjectsSection.vue';
 import ContactSection from '@/components/sections/ContactSection.vue';
 import { skills } from '@/constants/skills';
-import { projects } from '@/constants/projects';
+import { getProjects } from '@/constants/projects';
 
 export default {
   name: 'HomeView',
@@ -50,8 +50,15 @@ export default {
   data() {
     return {
       skills,
-      projects
+      projects: getProjects(this.$i18n.locale)
     };
+  },
+
+  watch: {
+    // Actualizamos los proyectos cuando cambia el idioma
+    '$i18n.locale': function(newLocale) {
+      this.projects = getProjects(newLocale);
+    }
   }
 }
 </script>

@@ -4,10 +4,10 @@
       <v-img class="img-home" src="/img/pp5.png" contain max-height="500"></v-img>
     </v-col>
     <v-col cols="6">
-      <h5 class="white--text top">Hola 👋🏻, soy</h5>
+      <h5 class="white--text top">{{ $i18n.locale === 'es' ? 'Hola 👋🏻, soy' : 'Hello 👋🏻, I am' }}</h5>
       <h1 class="green--text text--darken-2">Piero Gallo</h1>
       <p class="grey--text">
-        Desarrollador Frontend, apasionado por la Experiencia de Usuario
+        {{ $t('hero.content') }}
       </p>
       <v-btn
         title
@@ -16,7 +16,7 @@
         target="_blank"
         dark
       >
-        descarga mi cv
+        {{ $i18n.locale === 'es' ? 'Descarga mi CV' : 'Download my CV' }}
       </v-btn>
     </v-col>
   </v-row>
