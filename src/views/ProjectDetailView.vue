@@ -48,6 +48,7 @@
                   :href="project.github"
                   target="_blank"
                   class="mr-2 mb-2"
+                  @click="trackProjectLink(project.github, 'github')"
                 >
                   <v-icon left>mdi-github</v-icon>
                   Código fuente
@@ -59,6 +60,7 @@
                   :href="project.liveUrl"
                   target="_blank"
                   class="mb-2"
+                  @click="trackProjectLink(project.liveUrl, 'demo')"
                 >
                   <v-icon left>mdi-web</v-icon>
                   Ver demo
@@ -80,6 +82,7 @@
 import TheNavbar from '@/components/layout/TheNavbar.vue';
 import TheFooter from '@/components/layout/TheFooter.vue';
 import { projects } from '@/constants/projects';
+import { trackEvent, trackOutboundLink } from '@/utils/analyticsUtils';
 
 export default {
   name: 'ProjectDetailView',
@@ -98,7 +101,18 @@ export default {
       return this.projects.find(project => project.id === projectId) || null;
     }
   },
+  mounted() {
+    // Track project view when component mounts
+    if (this.project) {
+      trackEvent('Projects', 'view', this.project.name);
+    }
+  },
   methods: {
+    trackProjectLink(url, type) {
+      // Track outbound link clicks
+      trackOutboundLink(url, type);
+      trackEvent('Projects', 'click', `${this.project.name}-${type}`);
+    },
     goBack() {
       // Aseguramos que el flag para scroll esté establecido (aunque ya debería estar)
       localStorage.setItem('scrollToProjects', 'true');

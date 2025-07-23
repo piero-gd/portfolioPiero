@@ -22,6 +22,7 @@
                   href="https://www.linkedin.com/in/pierogallo/"
                   target="_blank" 
                   class="linkedin-btn"
+                  @click="trackLinkedInClick"
                 >
                   <v-icon left size="20px" class="linkedin-icon">mdi-linkedin</v-icon>
                   <span class="btn-text">{{ $t('contact.connect') }}</span>
@@ -37,8 +38,16 @@
 </template>
 
 <script>
+import { trackEvent, trackOutboundLink } from '@/utils/analyticsUtils';
+
 export default {
-  name: 'ContactSection'
+  name: 'ContactSection',
+  methods: {
+    trackLinkedInClick() {
+      trackOutboundLink('https://www.linkedin.com/in/pierogallo/', 'linkedin');
+      trackEvent('Contact', 'click', 'LinkedIn');
+    }
+  }
 }
 </script>
 

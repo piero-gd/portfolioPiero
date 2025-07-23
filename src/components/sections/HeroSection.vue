@@ -31,6 +31,7 @@
           dark
           class="mt-4 cv-button animate__animated animate__fadeIn animate__delay-1s"
           elevation="2"
+          @click="trackCVDownload"
         >
           <span class="btn-content">
             <v-icon left>mdi-download</v-icon>
@@ -43,6 +44,8 @@
 </template>
 
 <script>
+import { trackEvent, trackOutboundLink } from '@/utils/analyticsUtils';
+
 export default {
   name: 'HeroSection',
   data() {
@@ -54,6 +57,11 @@ export default {
     };
   },
   methods: {
+    trackCVDownload() {
+      // Track CV download event
+      trackOutboundLink('https://drive.google.com/file/d/1acAK3hmiXlW5GS0Mk0GtQMkD_jlNeczN/view?usp=sharing', 'cv-download');
+      trackEvent('Profile', 'download', 'CV');
+    },
     handleMouseMove(e) {
       if (!this.hoverImage) return;
       
