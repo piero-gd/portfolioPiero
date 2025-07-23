@@ -8,7 +8,7 @@ export const projectsData = {
     imageUrl: '/img/ss-cerocinco-home.png',
     technologies: ['React', 'Bootstrap', 'JavaScript'],
     github: 'https://github.com/Pierex99/cerocinco-Gallo',
-    liveUrl: 'https://eloquent-noether-43b4ff.netlify.app/',
+    liveUrl: 'https://cerocinco-ecommerce.netlify.app/',
     descriptions: {
       es: 'Aplicación web de una tienda de ropa virtual. Se utilizó React y Bootstrap.',
       en: 'Web application for a virtual clothing store. React and Bootstrap were used.'
